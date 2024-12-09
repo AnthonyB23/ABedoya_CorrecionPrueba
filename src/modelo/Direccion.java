@@ -9,5 +9,59 @@ package modelo;
  * @author Carlos
  */
 public class Direccion {
-    
+    private String calle;
+    private String ciudad;
+    private int codPostal;
+    private String pais;
+
+    public Direccion() {
+    }
+
+    public Direccion(String calle, String ciudad, int codPostal, String pais) {
+        this.calle = calle;
+        this.ciudad = ciudad;
+        this.codPostal = codPostal;
+        this.pais = pais;
+    }
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public int getCodPostal() {
+        return codPostal;
+    }
+
+    public void setCodPostal(int codPostal) {
+        this.codPostal = codPostal;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    @Override
+    public String toString() {
+        return "LA DIRECCIÓN ES:"+"\n"+
+                "Calle:"+getCalle()+"\n"+
+                "Ciudad:"+getCiudad()+"\n"+
+                "Código Postal"+getCodPostal()+"\n"+
+                "País:"+getPais();
+    }
 }
