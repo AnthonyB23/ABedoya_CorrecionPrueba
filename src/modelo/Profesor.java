@@ -8,63 +8,44 @@ package modelo;
  *
  * @author Carlos
  */
-public class Profesor {
-    private String calle;
-    private String ciudad;
-    private int codPostal;
-    private String pais;
+public class Profesor extends Persona {
+    private String despacho;
 
     public Profesor() {
     }
 
-    public Profesor(String calle, String ciudad, int codPostal, Stgring pais) {
-        this.calle = calle;
-        this.ciudad = ciudad;
-        this.codPostal = codPostal;
-        this.pais = pais;
+    public Profesor(String despacho) {
+        this.despacho = despacho;
     }
 
-    public String getCalle() {
-        return calle;
+    public Profesor(String despacho, String nombre, String apellido, int cedula, Direccion direccion) {
+        super(nombre, apellido, cedula, direccion);
+        this.despacho = despacho;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public String getDespacho() {
+        return despacho;
     }
 
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public int getCodPostal() {
-        return codPostal;
-    }
-
-    public void setCodPostal(int codPostal) {
-        this.codPostal = codPostal;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
+    public void setDespacho(String despacho) {
+        this.despacho = despacho;
     }
 
     @Override
     public String toString() {
-        return "LA DIRECCIÓN ES:"+"\n"+
-                "Calle:"+getCalle()+"\n"+
-                "Ciudad:"+getCiudad()+"\n"+
-                "Código Postal"+getCodPostal()+"\n"+
-                "País:"+getPais();
+        return "DATOS DEL PROFESOR:"+"\n"+
+                "Nombre: "+getNombre()+"\n"+
+                "Apellido:"+getApellido()+"\n"+
+                "Cédula: "+getCedula()+"\n"+
+                "Direccion: "+getDireccion()+"\n"+
+                "Despacho: "+getDespacho();
+                
     }
     
+    @Override
+    public void identificacion() {
+        System.out.println("Nombre de la clase es: Profesor");
+    }
     
     
     

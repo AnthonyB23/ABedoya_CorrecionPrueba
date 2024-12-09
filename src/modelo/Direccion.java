@@ -59,9 +59,9 @@ public class Direccion {
     @Override
     public String toString() {
         return "LA DIRECCIÓN ES:"+"\n"+
-                "Calle:"+getCalle()+"\n"+
-                "Ciudad:"+getCiudad()+"\n"+
-                "Código Postal"+getCodPostal()+"\n"+
-                "País:"+getPais();
+                "Calle: "+getCalle()+"\n"+
+                "Ciudad: "+getCiudad()+"\n"+
+                "Código Postal: "+getCodPostal()+"\n"+
+                "País: "+getPais();
     }
 }
